@@ -4,6 +4,4 @@ var Ads = function (name) {
     this.name = name;
 }
 
-module.exports = {
-    Ads: Ads    
-}
+module.exports = Ads;

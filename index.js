@@ -2,9 +2,9 @@
 
 const ads = require('./ads');
 
-var adClassic = new ads.Ads('classic');
-var adStandout = new ads.Ads('standout');
-var adPremium = new ads.Ads('premium');
+var adClassic = new ads('classic');
+var adStandout = new ads('standout');
+var adPremium = new ads('premium');
 
 const classicUnitPrice = 269.99;
 const standoutUnitPrice = 322.99;
@@ -22,8 +22,6 @@ var Company = function (name, classicGet, classicFor, standoutPriceDiscount, pre
     this.premiumPriceDiscount = premiumPriceDiscount;
     this.premiumWhen = premiumWhen;
 }
-
-var companyFord = new Company('Ford', 5, 4, 309.99, 389.99, 3);
 
 Company.prototype.addItem = function (item) {
 
@@ -185,4 +183,7 @@ companyFord.addItem(adClassic);
 companyFord.addItem(adClassic);
 companyFord.addItem(adClassic);
 companyFord.total();
+
+module.exports = Company;    
+
 
